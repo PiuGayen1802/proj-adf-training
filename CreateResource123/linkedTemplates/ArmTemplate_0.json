@@ -67,10 +67,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase5'"
 		},
-		"SqlServer6_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'SqlServer6'"
-		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "teddybear.database.windows.net"
@@ -95,17 +91,9 @@
 			"type": "string",
 			"defaultValue": "Piu"
 		},
-		"SqlServer6_properties_typeProperties_server": {
+		"RestService1_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "teddybear.database.windows.net"
-		},
-		"SqlServer6_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "AdventureWorks2008"
-		},
-		"SqlServer6_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "Piu"
+			"defaultValue": "https://freetestapi.com/api/v1/students"
 		}
 	},
 	"variables": {
@@ -483,24 +471,16 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SqlServer6')]",
+			"name": "[concat(parameters('factoryName'), '/RestService1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
 				"annotations": [],
-				"type": "SqlServer",
+				"type": "RestService",
 				"typeProperties": {
-					"server": "[parameters('SqlServer6_properties_typeProperties_server')]",
-					"database": "[parameters('SqlServer6_properties_typeProperties_database')]",
-					"encrypt": "optional",
-					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
-					"authenticationType": "SQL",
-					"userName": "[parameters('SqlServer6_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('SqlServer6_password')]"
-					}
+					"url": "[parameters('RestService1_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
 				}
 			},
 			"dependsOn": []

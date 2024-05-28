@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "CreateResource123"
 		},
+		"SqlServer6_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer6'"
+		},
 		"SqlServer1_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
@@ -26,6 +30,22 @@
 		"SqlServer5_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer5'"
+		},
+		"SqlServer7_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer7'"
+		},
+		"SqlServer6_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "teddybear.database.windows.net"
+		},
+		"SqlServer6_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2008"
+		},
+		"SqlServer6_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Piu"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
@@ -86,12 +106,47 @@
 		"SqlServer5_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "Piu"
+		},
+		"SqlServer7_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer7_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Sample"
+		},
+		"SqlServer7_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer6')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer6_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer6_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"hostNameInCertificate": "",
+					"authenticationType": "SQL",
+					"userName": "[parameters('SqlServer6_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer6_password')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
@@ -510,6 +565,22 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/RestResource1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "RestService1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -654,149 +725,32 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
+			"name": "[concat(parameters('factoryName'), '/SqlServer7')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
 			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SqlServer1",
-					"type": "LinkedServiceReference"
-				},
 				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "c_id",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "c_name",
-						"type": "varchar"
-					}
-				],
+				"type": "SqlServer",
 				"typeProperties": {
-					"schema": "dbo",
-					"table": "category"
+					"server": "[parameters('SqlServer7_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer7_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"hostNameInCertificate": "",
+					"authenticationType": "Windows",
+					"userName": "[parameters('SqlServer7_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer7_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/SqlServer1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerTable2')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SqlServer2",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "Id",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "varchar"
-					}
-				],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "Test"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/SqlServer2')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/SqlServerTable3')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "SqlServer4",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "SqlServerTable",
-				"schema": [
-					{
-						"name": "DocumentNode",
-						"type": "hierarchyid"
-					},
-					{
-						"name": "DocumentLevel",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "Title",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Owner",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "FolderFlag",
-						"type": "bit"
-					},
-					{
-						"name": "FileName",
-						"type": "nvarchar"
-					},
-					{
-						"name": "FileExtension",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Revision",
-						"type": "nchar"
-					},
-					{
-						"name": "ChangeNumber",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Status",
-						"type": "tinyint",
-						"precision": 3
-					},
-					{
-						"name": "DocumentSummary",
-						"type": "nvarchar"
-					},
-					{
-						"name": "Document",
-						"type": "varbinary"
-					},
-					{
-						"name": "rowguid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "Document"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/SqlServer4')]"
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
 			]
 		}
 	]

@@ -68,6 +68,9 @@
 		"SqlServer6_password": {
 			"value": ""
 		},
+		"SqlServer7_password": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "teddybear.database.windows.net"
 		},
@@ -85,6 +88,9 @@
 		},
 		"AzureSqlDatabase2_properties_typeProperties_userName": {
 			"value": "Piu"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "https://freetestapi.com/api/v1/students"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"value": "LAPTOP-SP8R9VVD"
@@ -139,6 +145,15 @@
 		},
 		"SqlServer6_properties_typeProperties_userName": {
 			"value": "Piu"
+		},
+		"SqlServer7_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer7_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"SqlServer7_properties_typeProperties_userName": {
+			"value": "HP"
 		}
 	}
 }
