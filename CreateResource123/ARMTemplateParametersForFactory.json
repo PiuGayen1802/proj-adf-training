@@ -29,10 +29,22 @@
 		"AzureBlobStorage8_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage9_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase4_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase5_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_password": {
