@@ -1,5 +1,5 @@
 {
-	"name": "dataflow_csv",
+	"name": "dataflow_sql",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {

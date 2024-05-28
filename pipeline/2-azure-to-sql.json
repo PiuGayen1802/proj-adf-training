@@ -1,5 +1,5 @@
 {
-	"name": "azure-to-sql",
+	"name": "2-azure-to-sql",
 	"properties": {
 		"activities": [
 			{

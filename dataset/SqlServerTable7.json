@@ -1,0 +1,41 @@
+{
+	"name": "SqlServerTable7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ProductID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Zip",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Units",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Revenue",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sales"
+		}
+	}
+}
