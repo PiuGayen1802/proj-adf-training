@@ -1,0 +1,135 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "CreateResource123"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage5_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage6_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage7_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage8_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"SqlServer2_password": {
+			"value": ""
+		},
+		"SqlServer3_password": {
+			"value": ""
+		},
+		"SqlServer4_password": {
+			"value": ""
+		},
+		"SqlServer5_password": {
+			"value": ""
+		},
+		"SqlServer6_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "teddybear.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "AdventureWorks2008"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "Piu"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "teddybear.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "project_adf"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "Piu"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "EMPORIUM_EASE"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer2_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer2_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"SqlServer2_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer3_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer3_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"SqlServer3_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer4_properties_typeProperties_server": {
+			"value": "teddybear.database.windows.net"
+		},
+		"SqlServer4_properties_typeProperties_database": {
+			"value": "AdventureWorks2008"
+		},
+		"SqlServer4_properties_typeProperties_userName": {
+			"value": "Piu"
+		},
+		"SqlServer5_properties_typeProperties_server": {
+			"value": "teddybear.database.windows.net"
+		},
+		"SqlServer5_properties_typeProperties_database": {
+			"value": "project_adf"
+		},
+		"SqlServer5_properties_typeProperties_userName": {
+			"value": "Piu"
+		},
+		"SqlServer6_properties_typeProperties_server": {
+			"value": "teddybear.database.windows.net"
+		},
+		"SqlServer6_properties_typeProperties_database": {
+			"value": "AdventureWorks2008"
+		},
+		"SqlServer6_properties_typeProperties_userName": {
+			"value": "Piu"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
