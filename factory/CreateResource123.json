@@ -1,0 +1,9 @@
+{
+	"name": "CreateResource123",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fed58486-4077-44da-b487-9c5a8eee95cb",
+		"tenantId": "220cbe42-2a91-4dea-9b5e-38fbbfcb83aa"
+	}
+}
