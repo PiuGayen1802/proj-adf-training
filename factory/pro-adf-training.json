@@ -1,0 +1,9 @@
+{
+	"name": "pro-adf-training",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0ee7238e-3136-4705-8578-ec419699b789",
+		"tenantId": "220cbe42-2a91-4dea-9b5e-38fbbfcb83aa"
+	}
+}
