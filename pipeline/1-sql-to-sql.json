@@ -32,144 +32,26 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "DocumentNode",
-									"physicalType": "hierarchyid"
-								},
-								"sink": {
-									"name": "DocumentNode",
-									"physicalType": "hierarchyid"
-								}
-							},
-							{
-								"source": {
-									"name": "DocumentLevel",
-									"type": "Int16",
-									"physicalType": "smallint"
-								},
-								"sink": {
-									"name": "DocumentLevel",
-									"type": "Int16",
-									"physicalType": "smallint"
-								}
-							},
-							{
-								"source": {
-									"name": "Title",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "Title",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Owner",
+									"name": "ProductCategoryID",
 									"type": "Int32",
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "Owner",
+									"name": "ProductCategoryID",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "FolderFlag",
-									"type": "Boolean",
-									"physicalType": "bit"
-								},
-								"sink": {
-									"name": "FolderFlag",
-									"type": "Boolean",
-									"physicalType": "bit"
-								}
-							},
-							{
-								"source": {
-									"name": "FileName",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "nvarchar"
 								},
 								"sink": {
-									"name": "FileName",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "FileExtension",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "FileExtension",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Revision",
-									"type": "String",
-									"physicalType": "nchar"
-								},
-								"sink": {
-									"name": "Revision",
-									"type": "String",
-									"physicalType": "nchar"
-								}
-							},
-							{
-								"source": {
-									"name": "ChangeNumber",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "ChangeNumber",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "Status",
-									"type": "Byte",
-									"physicalType": "tinyint"
-								},
-								"sink": {
-									"name": "Status",
-									"type": "Byte",
-									"physicalType": "tinyint"
-								}
-							},
-							{
-								"source": {
-									"name": "DocumentSummary",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "DocumentSummary",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "Document",
-									"type": "Byte[]",
-									"physicalType": "varbinary"
-								},
-								"sink": {
-									"name": "Document",
-									"type": "Byte[]",
-									"physicalType": "varbinary"
 								}
 							},
 							{
@@ -193,7 +75,7 @@
 								"sink": {
 									"name": "ModifiedDate",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime2"
 								}
 							}
 						],
@@ -212,7 +94,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerTable5",
+						"referenceName": "SqlServerTable11",
 						"type": "DatasetReference"
 					}
 				]
