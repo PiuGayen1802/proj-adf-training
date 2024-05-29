@@ -5,14 +5,8 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "teddybear.database.windows.net",
-			"database": "AdventureWorks2008",
-			"encrypt": "optional",
-			"trustServerCertificate": false,
-			"hostNameInCertificate": "",
-			"authenticationType": "SQL",
-			"userName": "Piu",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEMzRjA4ODQzLUY4NjMtNDE5My04MUMwLTQ4NEExOTk3RTUzNl8wZDZiYTNiMC1jMTZlLTQyYTctYmY1Zi05Y2ZhMDhkZDI1YTAiDQp9"
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=teddybear.database.windows.net;initial catalog=AdventureWorks2008;user id=Piu",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEMzRjA4ODQzLUY4NjMtNDE5My04MUMwLTQ4NEExOTk3RTUzNl8wOTRkNjMzNi0wNjBmLTRkOTUtOTI3NC0yOGI1OTc0ZDgxMmYiDQp9"
 		}
 	}
 }
