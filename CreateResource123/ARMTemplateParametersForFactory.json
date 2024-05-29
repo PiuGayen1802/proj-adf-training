@@ -98,6 +98,15 @@
 		"SqlServer9_password": {
 			"value": ""
 		},
+		"linkedService1_password": {
+			"value": ""
+		},
+		"linkedService2_password": {
+			"value": ""
+		},
+		"linkedService3_password": {
+			"value": ""
+		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"value": "teddybear.database.windows.net"
 		},
@@ -201,6 +210,33 @@
 			"value": "Sample"
 		},
 		"SqlServer9_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"linkedService1_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"linkedService1_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"linkedService2_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"linkedService2_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"linkedService2_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"linkedService3_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"linkedService3_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"linkedService3_properties_typeProperties_userName": {
 			"value": "HP"
 		}
 	}
