@@ -1,0 +1,22 @@
+{
+	"name": "SqlServer10",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "LAPTOP-SP8R9VVD",
+			"database": "Sample",
+			"encrypt": "optional",
+			"trustServerCertificate": false,
+			"hostNameInCertificate": "",
+			"authenticationType": "Windows",
+			"userName": "HP",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlNmU4YThlYy0wZWY1LTQ0MDUtYjM4OC1mZmYwZWM2YTQ1OTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
