@@ -35,7 +35,7 @@
 		"AzureBlobStorage9_connectionString": {
 			"value": ""
 		},
-		"AzureSqlDatabase1_password": {
+		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_password": {
@@ -48,6 +48,15 @@
 			"value": ""
 		},
 		"AzureSqlDatabase5_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase6_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase7_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase8_connectionString": {
 			"value": ""
 		},
 		"SqlServer1_password": {
@@ -70,15 +79,6 @@
 		},
 		"SqlServer7_password": {
 			"value": ""
-		},
-		"AzureSqlDatabase1_properties_typeProperties_server": {
-			"value": "teddybear.database.windows.net"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_database": {
-			"value": "AdventureWorks2008"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_userName": {
-			"value": "Piu"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"value": "teddybear.database.windows.net"

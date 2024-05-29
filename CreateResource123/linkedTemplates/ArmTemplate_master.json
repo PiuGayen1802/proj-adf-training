@@ -47,9 +47,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage9'"
 		},
-		"AzureSqlDatabase1_password": {
+		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
 		},
 		"AzureSqlDatabase2_password": {
 			"type": "secureString",
@@ -66,6 +66,18 @@
 		"AzureSqlDatabase5_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase5'"
+		},
+		"AzureSqlDatabase6_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase6'"
+		},
+		"AzureSqlDatabase7_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase7'"
+		},
+		"AzureSqlDatabase8_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase8'"
 		},
 		"SqlServer1_password": {
 			"type": "secureString",
@@ -94,18 +106,6 @@
 		"SqlServer7_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer7'"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "teddybear.database.windows.net"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "AdventureWorks2008"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "Piu"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
@@ -268,8 +268,8 @@
 					"AzureBlobStorage9_connectionString": {
 						"value": "[parameters('AzureBlobStorage9_connectionString')]"
 					},
-					"AzureSqlDatabase1_password": {
-						"value": "[parameters('AzureSqlDatabase1_password')]"
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
 					"AzureSqlDatabase2_password": {
 						"value": "[parameters('AzureSqlDatabase2_password')]"
@@ -283,14 +283,8 @@
 					"AzureSqlDatabase5_connectionString": {
 						"value": "[parameters('AzureSqlDatabase5_connectionString')]"
 					},
-					"AzureSqlDatabase1_properties_typeProperties_server": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
-					},
-					"AzureSqlDatabase1_properties_typeProperties_database": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
-					},
-					"AzureSqlDatabase1_properties_typeProperties_userName": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					"AzureSqlDatabase6_connectionString": {
+						"value": "[parameters('AzureSqlDatabase6_connectionString')]"
 					},
 					"AzureSqlDatabase2_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
@@ -300,9 +294,6 @@
 					},
 					"AzureSqlDatabase2_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
-					},
-					"RestService1_properties_typeProperties_url": {
-						"value": "[parameters('RestService1_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -322,8 +313,49 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase7_connectionString": {
+						"value": "[parameters('AzureSqlDatabase7_connectionString')]"
+					},
+					"AzureSqlDatabase8_connectionString": {
+						"value": "[parameters('AzureSqlDatabase8_connectionString')]"
+					},
 					"SqlServer6_password": {
 						"value": "[parameters('SqlServer6_password')]"
+					},
+					"RestService1_properties_typeProperties_url": {
+						"value": "[parameters('RestService1_properties_typeProperties_url')]"
+					},
+					"RestService2_properties_typeProperties_url": {
+						"value": "[parameters('RestService2_properties_typeProperties_url')]"
+					},
+					"SqlServer6_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer6_properties_typeProperties_server')]"
+					},
+					"SqlServer6_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer6_properties_typeProperties_database')]"
+					},
+					"SqlServer6_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer6_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "CreateResource123_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
@@ -337,17 +369,11 @@
 					"SqlServer4_password": {
 						"value": "[parameters('SqlServer4_password')]"
 					},
-					"RestService2_properties_typeProperties_url": {
-						"value": "[parameters('RestService2_properties_typeProperties_url')]"
+					"SqlServer5_password": {
+						"value": "[parameters('SqlServer5_password')]"
 					},
-					"SqlServer6_properties_typeProperties_server": {
-						"value": "[parameters('SqlServer6_properties_typeProperties_server')]"
-					},
-					"SqlServer6_properties_typeProperties_database": {
-						"value": "[parameters('SqlServer6_properties_typeProperties_database')]"
-					},
-					"SqlServer6_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer6_properties_typeProperties_userName')]"
+					"SqlServer7_password": {
+						"value": "[parameters('SqlServer7_password')]"
 					},
 					"SqlServer1_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
@@ -384,32 +410,6 @@
 					},
 					"SqlServer4_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer4_properties_typeProperties_userName')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_0')]"
-			]
-		},
-		{
-			"name": "CreateResource123_ArmTemplate_2",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2018-02-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
-					},
-					"SqlServer5_password": {
-						"value": "[parameters('SqlServer5_password')]"
-					},
-					"SqlServer7_password": {
-						"value": "[parameters('SqlServer7_password')]"
 					},
 					"SqlServer5_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer5_properties_typeProperties_server')]"
@@ -433,6 +433,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "CreateResource123_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_2')]"
 			]
 		}
 	]
