@@ -95,6 +95,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
+		"SqlServer10_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer10'"
+		},
 		"SqlServer2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer2'"
@@ -122,6 +126,10 @@
 		"SqlServer8_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer8'"
+		},
+		"SqlServer9_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer9'"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
@@ -152,6 +160,18 @@
 			"defaultValue": "EMPORIUM_EASE"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer10_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer10_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Sample"
+		},
+		"SqlServer10_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		},
@@ -193,15 +213,15 @@
 		},
 		"SqlServer5_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "teddybear.database.windows.net"
+			"defaultValue": "LAPTOP-SP8R9VVD"
 		},
 		"SqlServer5_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "project_adf"
+			"defaultValue": "AdventureWorks2008R2"
 		},
 		"SqlServer5_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "Piu"
+			"defaultValue": "HP"
 		},
 		"SqlServer6_properties_typeProperties_server": {
 			"type": "string",
@@ -236,6 +256,18 @@
 			"defaultValue": "Sample"
 		},
 		"SqlServer8_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer9_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer9_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Sample"
+		},
+		"SqlServer9_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		}
@@ -280,144 +312,26 @@
 								"mappings": [
 									{
 										"source": {
-											"name": "DocumentNode",
-											"physicalType": "hierarchyid"
-										},
-										"sink": {
-											"name": "DocumentNode",
-											"physicalType": "hierarchyid"
-										}
-									},
-									{
-										"source": {
-											"name": "DocumentLevel",
-											"type": "Int16",
-											"physicalType": "smallint"
-										},
-										"sink": {
-											"name": "DocumentLevel",
-											"type": "Int16",
-											"physicalType": "smallint"
-										}
-									},
-									{
-										"source": {
-											"name": "Title",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "Title",
-											"type": "String",
-											"physicalType": "nvarchar"
-										}
-									},
-									{
-										"source": {
-											"name": "Owner",
+											"name": "ProductCategoryID",
 											"type": "Int32",
 											"physicalType": "int"
 										},
 										"sink": {
-											"name": "Owner",
+											"name": "ProductCategoryID",
 											"type": "Int32",
 											"physicalType": "int"
 										}
 									},
 									{
 										"source": {
-											"name": "FolderFlag",
-											"type": "Boolean",
-											"physicalType": "bit"
-										},
-										"sink": {
-											"name": "FolderFlag",
-											"type": "Boolean",
-											"physicalType": "bit"
-										}
-									},
-									{
-										"source": {
-											"name": "FileName",
+											"name": "Name",
 											"type": "String",
 											"physicalType": "nvarchar"
 										},
 										"sink": {
-											"name": "FileName",
+											"name": "Name",
 											"type": "String",
 											"physicalType": "nvarchar"
-										}
-									},
-									{
-										"source": {
-											"name": "FileExtension",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "FileExtension",
-											"type": "String",
-											"physicalType": "nvarchar"
-										}
-									},
-									{
-										"source": {
-											"name": "Revision",
-											"type": "String",
-											"physicalType": "nchar"
-										},
-										"sink": {
-											"name": "Revision",
-											"type": "String",
-											"physicalType": "nchar"
-										}
-									},
-									{
-										"source": {
-											"name": "ChangeNumber",
-											"type": "Int32",
-											"physicalType": "int"
-										},
-										"sink": {
-											"name": "ChangeNumber",
-											"type": "Int32",
-											"physicalType": "int"
-										}
-									},
-									{
-										"source": {
-											"name": "Status",
-											"type": "Byte",
-											"physicalType": "tinyint"
-										},
-										"sink": {
-											"name": "Status",
-											"type": "Byte",
-											"physicalType": "tinyint"
-										}
-									},
-									{
-										"source": {
-											"name": "DocumentSummary",
-											"type": "String",
-											"physicalType": "nvarchar"
-										},
-										"sink": {
-											"name": "DocumentSummary",
-											"type": "String",
-											"physicalType": "nvarchar"
-										}
-									},
-									{
-										"source": {
-											"name": "Document",
-											"type": "Byte[]",
-											"physicalType": "varbinary"
-										},
-										"sink": {
-											"name": "Document",
-											"type": "Byte[]",
-											"physicalType": "varbinary"
 										}
 									},
 									{
@@ -441,7 +355,7 @@
 										"sink": {
 											"name": "ModifiedDate",
 											"type": "DateTime",
-											"physicalType": "datetime"
+											"physicalType": "datetime2"
 										}
 									}
 								],
@@ -461,7 +375,7 @@
 						],
 						"outputs": [
 							{
-								"referenceName": "SqlServerTable5",
+								"referenceName": "SqlServerTable11",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -475,7 +389,8 @@
 				"lastPublishTime": "2024-05-28T07:08:09Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/SqlServerTable5')]"
+				"[concat(variables('factoryId'), '/datasets/SqlServerTable5')]",
+				"[concat(variables('factoryId'), '/datasets/SqlServerTable11')]"
 			]
 		},
 		{
@@ -2353,6 +2268,27 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SqlServerTable11')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SqlServer10",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "details"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SqlServer10')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServerTable2')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -2627,8 +2563,8 @@
 					}
 				],
 				"typeProperties": {
-					"schema": "dbo",
-					"table": "Docs"
+					"schema": "Production",
+					"table": "ProductCategory"
 				}
 			},
 			"dependsOn": [
@@ -3150,6 +3086,35 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer10')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer10_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer10_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"hostNameInCertificate": "",
+					"authenticationType": "Windows",
+					"userName": "[parameters('SqlServer10_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer10_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServer2')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -3249,7 +3214,7 @@
 					"encrypt": "optional",
 					"trustServerCertificate": false,
 					"hostNameInCertificate": "",
-					"authenticationType": "SQL",
+					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer5_properties_typeProperties_userName')]",
 					"password": {
 						"type": "SecureString",
@@ -3335,6 +3300,35 @@
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('SqlServer8_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer9')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"server": "[parameters('SqlServer9_properties_typeProperties_server')]",
+					"database": "[parameters('SqlServer9_properties_typeProperties_database')]",
+					"encrypt": "optional",
+					"trustServerCertificate": false,
+					"hostNameInCertificate": "",
+					"authenticationType": "Windows",
+					"userName": "[parameters('SqlServer9_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer9_password')]"
 					}
 				},
 				"connectVia": {

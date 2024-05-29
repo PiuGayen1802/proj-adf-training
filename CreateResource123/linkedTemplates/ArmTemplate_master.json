@@ -95,6 +95,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer1'"
 		},
+		"SqlServer10_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer10'"
+		},
 		"SqlServer2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer2'"
@@ -122,6 +126,10 @@
 		"SqlServer8_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer8'"
+		},
+		"SqlServer9_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer9'"
 		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
@@ -152,6 +160,18 @@
 			"defaultValue": "EMPORIUM_EASE"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer10_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer10_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Sample"
+		},
+		"SqlServer10_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		},
@@ -193,15 +213,15 @@
 		},
 		"SqlServer5_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "teddybear.database.windows.net"
+			"defaultValue": "LAPTOP-SP8R9VVD"
 		},
 		"SqlServer5_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "project_adf"
+			"defaultValue": "AdventureWorks2008R2"
 		},
 		"SqlServer5_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "Piu"
+			"defaultValue": "HP"
 		},
 		"SqlServer6_properties_typeProperties_server": {
 			"type": "string",
@@ -236,6 +256,18 @@
 			"defaultValue": "Sample"
 		},
 		"SqlServer8_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer9_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer9_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Sample"
+		},
+		"SqlServer9_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		},
@@ -397,6 +429,9 @@
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
 					},
+					"SqlServer10_password": {
+						"value": "[parameters('SqlServer10_password')]"
+					},
 					"SqlServer2_password": {
 						"value": "[parameters('SqlServer2_password')]"
 					},
@@ -415,6 +450,9 @@
 					"SqlServer8_password": {
 						"value": "[parameters('SqlServer8_password')]"
 					},
+					"SqlServer9_password": {
+						"value": "[parameters('SqlServer9_password')]"
+					},
 					"SqlServer1_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
 					},
@@ -423,6 +461,15 @@
 					},
 					"SqlServer1_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					},
+					"SqlServer10_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer10_properties_typeProperties_server')]"
+					},
+					"SqlServer10_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer10_properties_typeProperties_database')]"
+					},
+					"SqlServer10_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer10_properties_typeProperties_userName')]"
 					},
 					"SqlServer2_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer2_properties_typeProperties_server')]"
@@ -477,6 +524,15 @@
 					},
 					"SqlServer8_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer8_properties_typeProperties_userName')]"
+					},
+					"SqlServer9_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer9_properties_typeProperties_server')]"
+					},
+					"SqlServer9_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer9_properties_typeProperties_database')]"
+					},
+					"SqlServer9_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer9_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -502,6 +558,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_2')]"
+			]
+		},
+		{
+			"name": "CreateResource123_ArmTemplate_4",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_4.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_3')]"
 			]
 		}
 	]

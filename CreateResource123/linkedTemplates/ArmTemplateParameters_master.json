@@ -71,6 +71,9 @@
 		"SqlServer1_password": {
 			"value": ""
 		},
+		"SqlServer10_password": {
+			"value": ""
+		},
 		"SqlServer2_password": {
 			"value": ""
 		},
@@ -90,6 +93,9 @@
 			"value": ""
 		},
 		"SqlServer8_password": {
+			"value": ""
+		},
+		"SqlServer9_password": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
@@ -114,6 +120,15 @@
 			"value": "EMPORIUM_EASE"
 		},
 		"SqlServer1_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer10_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer10_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"SqlServer10_properties_typeProperties_userName": {
 			"value": "HP"
 		},
 		"SqlServer2_properties_typeProperties_server": {
@@ -144,13 +159,13 @@
 			"value": "Piu"
 		},
 		"SqlServer5_properties_typeProperties_server": {
-			"value": "teddybear.database.windows.net"
+			"value": "LAPTOP-SP8R9VVD"
 		},
 		"SqlServer5_properties_typeProperties_database": {
-			"value": "project_adf"
+			"value": "AdventureWorks2008R2"
 		},
 		"SqlServer5_properties_typeProperties_userName": {
-			"value": "Piu"
+			"value": "HP"
 		},
 		"SqlServer6_properties_typeProperties_server": {
 			"value": "teddybear.database.windows.net"
@@ -177,6 +192,15 @@
 			"value": "Sample"
 		},
 		"SqlServer8_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer9_properties_typeProperties_server": {
+			"value": "LAPTOP-SP8R9VVD"
+		},
+		"SqlServer9_properties_typeProperties_database": {
+			"value": "Sample"
+		},
+		"SqlServer9_properties_typeProperties_userName": {
 			"value": "HP"
 		},
 		"containerUri": {
