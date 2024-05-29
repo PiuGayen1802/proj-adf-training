@@ -5,14 +5,14 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"server": "teddybear.database.windows.net",
-			"database": "project_adf",
+			"server": "LAPTOP-SP8R9VVD",
+			"database": "AdventureWorkd2008R2",
 			"encrypt": "optional",
 			"trustServerCertificate": false,
 			"hostNameInCertificate": "",
-			"authenticationType": "SQL",
-			"userName": "Piu",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxMDI0ODVkZC0yMzBjLTQ2ZjItYTAzMS05ZjgyOTE4ZjBiYjIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"authenticationType": "Windows",
+			"userName": "HP",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5ODZhNjQzYS1kOTE0LTQ2MjAtYjZmZC0zZTA4YWZhNjI5M2YiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
