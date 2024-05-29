@@ -123,6 +123,10 @@
 			"type": "string",
 			"defaultValue": "https://freetestapi.com/api/v1/students"
 		},
+		"RestService2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://reqres.in/api/users"
+		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "LAPTOP-SP8R9VVD"
@@ -333,11 +337,8 @@
 					"SqlServer4_password": {
 						"value": "[parameters('SqlServer4_password')]"
 					},
-					"SqlServer5_password": {
-						"value": "[parameters('SqlServer5_password')]"
-					},
-					"SqlServer7_password": {
-						"value": "[parameters('SqlServer7_password')]"
+					"RestService2_properties_typeProperties_url": {
+						"value": "[parameters('RestService2_properties_typeProperties_url')]"
 					},
 					"SqlServer6_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer6_properties_typeProperties_server')]"
@@ -383,24 +384,6 @@
 					},
 					"SqlServer4_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer4_properties_typeProperties_userName')]"
-					},
-					"SqlServer5_properties_typeProperties_server": {
-						"value": "[parameters('SqlServer5_properties_typeProperties_server')]"
-					},
-					"SqlServer5_properties_typeProperties_database": {
-						"value": "[parameters('SqlServer5_properties_typeProperties_database')]"
-					},
-					"SqlServer5_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer5_properties_typeProperties_userName')]"
-					},
-					"SqlServer7_properties_typeProperties_server": {
-						"value": "[parameters('SqlServer7_properties_typeProperties_server')]"
-					},
-					"SqlServer7_properties_typeProperties_database": {
-						"value": "[parameters('SqlServer7_properties_typeProperties_database')]"
-					},
-					"SqlServer7_properties_typeProperties_userName": {
-						"value": "[parameters('SqlServer7_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -421,6 +404,30 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer5_password": {
+						"value": "[parameters('SqlServer5_password')]"
+					},
+					"SqlServer7_password": {
+						"value": "[parameters('SqlServer7_password')]"
+					},
+					"SqlServer5_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer5_properties_typeProperties_server')]"
+					},
+					"SqlServer5_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer5_properties_typeProperties_database')]"
+					},
+					"SqlServer5_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer5_properties_typeProperties_userName')]"
+					},
+					"SqlServer7_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer7_properties_typeProperties_server')]"
+					},
+					"SqlServer7_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer7_properties_typeProperties_database')]"
+					},
+					"SqlServer7_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer7_properties_typeProperties_userName')]"
 					}
 				}
 			},

@@ -92,6 +92,9 @@
 		"RestService1_properties_typeProperties_url": {
 			"value": "https://freetestapi.com/api/v1/students"
 		},
+		"RestService2_properties_typeProperties_url": {
+			"value": "https://reqres.in/api/users"
+		},
 		"SqlServer1_properties_typeProperties_server": {
 			"value": "LAPTOP-SP8R9VVD"
 		},
