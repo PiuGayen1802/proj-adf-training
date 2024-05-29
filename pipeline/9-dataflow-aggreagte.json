@@ -1,5 +1,5 @@
 {
-	"name": "8-dataflow_sql_pipeline",
+	"name": "9-dataflow-aggreagte",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "dataflow_sql",
+						"referenceName": "dataflow_aggregate",
 						"type": "DataFlowReference"
 					},
 					"compute": {
