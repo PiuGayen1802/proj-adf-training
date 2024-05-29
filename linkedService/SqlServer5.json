@@ -6,13 +6,13 @@
 		"type": "SqlServer",
 		"typeProperties": {
 			"server": "LAPTOP-SP8R9VVD",
-			"database": "AdventureWorkd2008R2",
+			"database": "AdventureWorks2008R2",
 			"encrypt": "optional",
 			"trustServerCertificate": false,
 			"hostNameInCertificate": "",
 			"authenticationType": "Windows",
 			"userName": "HP",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI5ODZhNjQzYS1kOTE0LTQ2MjAtYjZmZC0zZTA4YWZhNjI5M2YiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiYTE4NzA3ZS04NjgxLTQyZDctYWEwMS0wNDk4NGZhZDJjNDMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
