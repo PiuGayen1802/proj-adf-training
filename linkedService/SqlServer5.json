@@ -12,7 +12,7 @@
 			"hostNameInCertificate": "",
 			"authenticationType": "Windows",
 			"userName": "HP",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNDgzYzZjMi1jMmNkLTQ0MzQtYTQ4Mi1mZjg3ZWM3ODMyNzIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3YTEzNTdlMS0wNGMzLTQ1MmYtYWI5Ni1jNDI3YzRiM2VkZmUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
