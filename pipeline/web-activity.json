@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "https://dummy.restapiexample.com/api/v1/employee/1\t"
+					"url": "https://jsonplaceholder.typicode.com/posts"
 				}
 			}
 		],
