@@ -1,0 +1,17 @@
+{
+	"name": "SqlServer14",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=LAPTOP-SP8R9VVD;initial catalog=sample",
+			"userName": "HP",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2Y2RhNjZkMi1iZTU4LTQzZmItYThkZi0yOTY0YWFlOTA1MjkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
