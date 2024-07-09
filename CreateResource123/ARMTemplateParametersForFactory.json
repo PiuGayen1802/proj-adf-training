@@ -20,6 +20,9 @@
 		"AzureBlobStorage13_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage14_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage2_connectionString": {
 			"value": ""
 		},
@@ -74,6 +77,24 @@
 		"SqlServer10_password": {
 			"value": ""
 		},
+		"SqlServer11_connectionString": {
+			"value": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer11_password": {
+			"value": ""
+		},
+		"SqlServer12_connectionString": {
+			"value": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer12_password": {
+			"value": ""
+		},
+		"SqlServer13_connectionString": {
+			"value": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer13_password": {
+			"value": ""
+		},
 		"SqlServer2_password": {
 			"value": ""
 		},
@@ -107,6 +128,33 @@
 		"linkedService3_password": {
 			"value": ""
 		},
+		"AzureBlobStorage15_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage16_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage17_connectionString": {
+			"value": ""
+		},
+		"SqlServer14_connectionString": {
+			"value": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer14_password": {
+			"value": ""
+		},
+		"AzureBlobStorage18_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage19_connectionString": {
+			"value": ""
+		},
+		"SqlServer15_connectionString": {
+			"value": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer15_password": {
+			"value": ""
+		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"value": "teddybear.database.windows.net"
 		},
@@ -121,6 +169,12 @@
 		},
 		"RestService2_properties_typeProperties_url": {
 			"value": "https://reqres.in/api/users"
+		},
+		"RestService3_properties_typeProperties_url": {
+			"value": "https://api.restful-api.dev/objects"
+		},
+		"RestService4_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/comments?postId=1"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"value": "LAPTOP-SP8R9VVD"
@@ -138,6 +192,15 @@
 			"value": "Sample"
 		},
 		"SqlServer10_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer11_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer12_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer13_properties_typeProperties_userName": {
 			"value": "HP"
 		},
 		"SqlServer2_properties_typeProperties_server": {
@@ -237,6 +300,12 @@
 			"value": "Sample"
 		},
 		"linkedService3_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer14_properties_typeProperties_userName": {
+			"value": "HP"
+		},
+		"SqlServer15_properties_typeProperties_userName": {
 			"value": "HP"
 		}
 	}

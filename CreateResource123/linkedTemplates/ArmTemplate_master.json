@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage13'"
 		},
+		"AzureBlobStorage14_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage14'"
+		},
 		"AzureBlobStorage2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
@@ -99,6 +103,33 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer10'"
 		},
+		"SqlServer11_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer11'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer11_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer11'"
+		},
+		"SqlServer12_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer12'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer12_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer12'"
+		},
+		"SqlServer13_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer13'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer13_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer13'"
+		},
 		"SqlServer2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer2'"
@@ -143,6 +174,44 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'linkedService3'"
 		},
+		"AzureBlobStorage15_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage15'"
+		},
+		"AzureBlobStorage16_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage16'"
+		},
+		"AzureBlobStorage17_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage17'"
+		},
+		"SqlServer14_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer14'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer14_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer14'"
+		},
+		"AzureBlobStorage18_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage18'"
+		},
+		"AzureBlobStorage19_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage19'"
+		},
+		"SqlServer15_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer15'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer15_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer15'"
+		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "teddybear.database.windows.net"
@@ -162,6 +231,14 @@
 		"RestService2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://reqres.in/api/users"
+		},
+		"RestService3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.restful-api.dev/objects"
+		},
+		"RestService4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/comments?postId=1"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
@@ -184,6 +261,18 @@
 			"defaultValue": "Sample"
 		},
 		"SqlServer10_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer11_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer12_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer13_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		},
@@ -319,6 +408,14 @@
 			"type": "string",
 			"defaultValue": "HP"
 		},
+		"SqlServer14_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer15_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -361,6 +458,9 @@
 					"AzureBlobStorage13_connectionString": {
 						"value": "[parameters('AzureBlobStorage13_connectionString')]"
 					},
+					"AzureBlobStorage14_connectionString": {
+						"value": "[parameters('AzureBlobStorage14_connectionString')]"
+					},
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
 					},
@@ -391,9 +491,6 @@
 					"AzureSqlDatabase2_password": {
 						"value": "[parameters('AzureSqlDatabase2_password')]"
 					},
-					"AzureSqlDatabase3_connectionString": {
-						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
-					},
 					"AzureSqlDatabase2_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
 					},
@@ -421,6 +518,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase3_connectionString": {
+						"value": "[parameters('AzureSqlDatabase3_connectionString')]"
+					},
 					"AzureSqlDatabase4_connectionString": {
 						"value": "[parameters('AzureSqlDatabase4_connectionString')]"
 					},
@@ -439,11 +539,32 @@
 					"SqlServer6_password": {
 						"value": "[parameters('SqlServer6_password')]"
 					},
+					"AzureBlobStorage15_connectionString": {
+						"value": "[parameters('AzureBlobStorage15_connectionString')]"
+					},
+					"AzureBlobStorage16_connectionString": {
+						"value": "[parameters('AzureBlobStorage16_connectionString')]"
+					},
+					"AzureBlobStorage17_connectionString": {
+						"value": "[parameters('AzureBlobStorage17_connectionString')]"
+					},
+					"AzureBlobStorage18_connectionString": {
+						"value": "[parameters('AzureBlobStorage18_connectionString')]"
+					},
+					"AzureBlobStorage19_connectionString": {
+						"value": "[parameters('AzureBlobStorage19_connectionString')]"
+					},
 					"RestService1_properties_typeProperties_url": {
 						"value": "[parameters('RestService1_properties_typeProperties_url')]"
 					},
 					"RestService2_properties_typeProperties_url": {
 						"value": "[parameters('RestService2_properties_typeProperties_url')]"
+					},
+					"RestService3_properties_typeProperties_url": {
+						"value": "[parameters('RestService3_properties_typeProperties_url')]"
+					},
+					"RestService4_properties_typeProperties_url": {
+						"value": "[parameters('RestService4_properties_typeProperties_url')]"
 					},
 					"SqlServer6_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer6_properties_typeProperties_server')]"
@@ -473,12 +594,50 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "CreateResource123_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
 					},
 					"SqlServer1_password": {
 						"value": "[parameters('SqlServer1_password')]"
 					},
 					"SqlServer10_password": {
 						"value": "[parameters('SqlServer10_password')]"
+					},
+					"SqlServer11_connectionString": {
+						"value": "[parameters('SqlServer11_connectionString')]"
+					},
+					"SqlServer11_password": {
+						"value": "[parameters('SqlServer11_password')]"
+					},
+					"SqlServer12_connectionString": {
+						"value": "[parameters('SqlServer12_connectionString')]"
+					},
+					"SqlServer12_password": {
+						"value": "[parameters('SqlServer12_password')]"
+					},
+					"SqlServer13_connectionString": {
+						"value": "[parameters('SqlServer13_connectionString')]"
+					},
+					"SqlServer13_password": {
+						"value": "[parameters('SqlServer13_password')]"
 					},
 					"SqlServer2_password": {
 						"value": "[parameters('SqlServer2_password')]"
@@ -501,6 +660,21 @@
 					"SqlServer9_password": {
 						"value": "[parameters('SqlServer9_password')]"
 					},
+					"linkedService1_password": {
+						"value": "[parameters('linkedService1_password')]"
+					},
+					"linkedService2_password": {
+						"value": "[parameters('linkedService2_password')]"
+					},
+					"linkedService3_password": {
+						"value": "[parameters('linkedService3_password')]"
+					},
+					"SqlServer14_connectionString": {
+						"value": "[parameters('SqlServer14_connectionString')]"
+					},
+					"SqlServer14_password": {
+						"value": "[parameters('SqlServer14_password')]"
+					},
 					"SqlServer1_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
 					},
@@ -518,6 +692,15 @@
 					},
 					"SqlServer10_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer10_properties_typeProperties_userName')]"
+					},
+					"SqlServer11_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer11_properties_typeProperties_userName')]"
+					},
+					"SqlServer12_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer12_properties_typeProperties_userName')]"
+					},
+					"SqlServer13_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer13_properties_typeProperties_userName')]"
 					},
 					"SqlServer2_properties_typeProperties_server": {
 						"value": "[parameters('SqlServer2_properties_typeProperties_server')]"
@@ -581,35 +764,6 @@
 					},
 					"SqlServer9_properties_typeProperties_userName": {
 						"value": "[parameters('SqlServer9_properties_typeProperties_userName')]"
-					}
-				}
-			},
-			"dependsOn": [
-				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_1')]"
-			]
-		},
-		{
-			"name": "CreateResource123_ArmTemplate_3",
-			"type": "Microsoft.Resources/deployments",
-			"apiVersion": "2018-02-01",
-			"properties": {
-				"mode": "incremental",
-				"templateLink": {
-					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
-					"contentVersion": "1.0.0.0"
-				},
-				"parameters": {
-					"factoryName": {
-						"value": "[parameters('factoryName')]"
-					},
-					"linkedService1_password": {
-						"value": "[parameters('linkedService1_password')]"
-					},
-					"linkedService2_password": {
-						"value": "[parameters('linkedService2_password')]"
-					},
-					"linkedService3_password": {
-						"value": "[parameters('linkedService3_password')]"
 					},
 					"linkedService1_properties_typeProperties_server": {
 						"value": "[parameters('linkedService1_properties_typeProperties_server')]"
@@ -637,6 +791,9 @@
 					},
 					"linkedService3_properties_typeProperties_userName": {
 						"value": "[parameters('linkedService3_properties_typeProperties_userName')]"
+					},
+					"SqlServer14_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer14_properties_typeProperties_userName')]"
 					}
 				}
 			},
@@ -657,11 +814,40 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SqlServer15_connectionString": {
+						"value": "[parameters('SqlServer15_connectionString')]"
+					},
+					"SqlServer15_password": {
+						"value": "[parameters('SqlServer15_password')]"
+					},
+					"SqlServer15_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer15_properties_typeProperties_userName')]"
 					}
 				}
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_3')]"
+			]
+		},
+		{
+			"name": "CreateResource123_ArmTemplate_5",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_5.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'CreateResource123_ArmTemplate_4')]"
 			]
 		}
 	]

@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage13'"
 		},
+		"AzureBlobStorage14_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage14'"
+		},
 		"AzureBlobStorage2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
@@ -99,6 +103,33 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer10'"
 		},
+		"SqlServer11_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer11'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer11_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer11'"
+		},
+		"SqlServer12_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer12'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer12_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer12'"
+		},
+		"SqlServer13_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer13'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer13_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer13'"
+		},
 		"SqlServer2_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer2'"
@@ -143,6 +174,44 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'linkedService3'"
 		},
+		"AzureBlobStorage15_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage15'"
+		},
+		"AzureBlobStorage16_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage16'"
+		},
+		"AzureBlobStorage17_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage17'"
+		},
+		"SqlServer14_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer14'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer14_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer14'"
+		},
+		"AzureBlobStorage18_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage18'"
+		},
+		"AzureBlobStorage19_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage19'"
+		},
+		"SqlServer15_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer15'",
+			"defaultValue": "Integrated Security=True;Data Source=LAPTOP-SP8R9VVD;Initial Catalog=sample"
+		},
+		"SqlServer15_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer15'"
+		},
 		"AzureSqlDatabase2_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "teddybear.database.windows.net"
@@ -162,6 +231,14 @@
 		"RestService2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://reqres.in/api/users"
+		},
+		"RestService3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.restful-api.dev/objects"
+		},
+		"RestService4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/comments?postId=1"
 		},
 		"SqlServer1_properties_typeProperties_server": {
 			"type": "string",
@@ -184,6 +261,18 @@
 			"defaultValue": "Sample"
 		},
 		"SqlServer10_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer11_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer12_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer13_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		},
@@ -316,6 +405,14 @@
 			"defaultValue": "Sample"
 		},
 		"linkedService3_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer14_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "HP"
+		},
+		"SqlServer15_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "HP"
 		}
@@ -1386,6 +1483,93 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/pipeline2')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Web1",
+						"type": "WebActivity",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"method": "GET",
+							"headers": {},
+							"url": "https://jsonplaceholder.typicode.com/comments?postId=1"
+						}
+					},
+					{
+						"name": "Copy data1",
+						"type": "Copy",
+						"dependsOn": [
+							{
+								"activity": "Web1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"source": {
+								"type": "RestSource",
+								"httpRequestTimeout": "00:01:40",
+								"requestInterval": "00.00:00:00.010",
+								"requestMethod": "GET",
+								"paginationRules": {
+									"supportRFC5988": "true"
+								}
+							},
+							"sink": {
+								"type": "SqlServerSink",
+								"writeBehavior": "insert",
+								"sqlWriterUseTableLock": false,
+								"tableOption": "autoCreate"
+							},
+							"enableStaging": false
+						},
+						"inputs": [
+							{
+								"referenceName": "RestResource3",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						],
+						"outputs": [
+							{
+								"referenceName": "SqlServerTable12",
+								"type": "DatasetReference",
+								"parameters": {}
+							}
+						]
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/RestResource3')]",
+				"[concat(variables('factoryId'), '/datasets/SqlServerTable12')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/web-activity')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -2235,6 +2419,56 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/Excel1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage14",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Excel",
+				"typeProperties": {
+					"sheetName": "Sheet1",
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "file_example_XLS_10.xls",
+						"container": "sample"
+					}
+				},
+				"schema": [
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					},
+					{
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage14')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/RestResource1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -2278,6 +2512,24 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/RestService2')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/RestResource3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "RestService4",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "RestResource",
+				"typeProperties": {},
+				"schema": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/RestService4')]"
 			]
 		},
 		{
@@ -2376,6 +2628,47 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/SqlServer10')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServerTable12')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SqlServer13",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "ProductCategoryID",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "Name",
+						"type": "varchar"
+					},
+					{
+						"name": "rowguid",
+						"type": "uniqueidentifier"
+					},
+					{
+						"name": "ModifiedDate",
+						"type": "datetime",
+						"precision": 23,
+						"scale": 3
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "sample1"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SqlServer13')]"
 			]
 		},
 		{
@@ -2900,6 +3193,19 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage14')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage14_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage2')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -3028,7 +3334,6 @@
 					"database": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "SQL",
 					"userName": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]",
 					"password": {
@@ -3148,6 +3453,36 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/RestService3')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('RestService3_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/RestService4')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('RestService4_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServer1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -3187,12 +3522,83 @@
 					"database": "[parameters('SqlServer10_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer10_properties_typeProperties_userName')]",
 					"password": {
 						"type": "SecureString",
 						"value": "[parameters('SqlServer10_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer11')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer11_connectionString')]",
+					"userName": "[parameters('SqlServer11_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer11_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer12')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer12_connectionString')]",
+					"userName": "[parameters('SqlServer12_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer12_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer13')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer13_connectionString')]",
+					"userName": "[parameters('SqlServer13_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer13_password')]"
 					}
 				},
 				"connectVia": {
@@ -3216,7 +3622,6 @@
 					"database": "[parameters('SqlServer2_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer2_properties_typeProperties_userName')]",
 					"password": {
@@ -3245,7 +3650,6 @@
 					"database": "[parameters('SqlServer3_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer3_properties_typeProperties_userName')]",
 					"password": {
@@ -3274,7 +3678,6 @@
 					"database": "[parameters('SqlServer4_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "SQL",
 					"userName": "[parameters('SqlServer4_properties_typeProperties_userName')]",
 					"password": {
@@ -3303,7 +3706,6 @@
 					"database": "[parameters('SqlServer5_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer5_properties_typeProperties_userName')]",
 					"password": {
@@ -3332,7 +3734,6 @@
 					"database": "[parameters('SqlServer6_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "SQL",
 					"userName": "[parameters('SqlServer6_properties_typeProperties_userName')]",
 					"password": {
@@ -3355,7 +3756,6 @@
 					"database": "[parameters('SqlServer7_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer7_properties_typeProperties_userName')]",
 					"password": {
@@ -3384,7 +3784,6 @@
 					"database": "[parameters('SqlServer8_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer8_properties_typeProperties_userName')]",
 					"password": {
@@ -3413,7 +3812,6 @@
 					"database": "[parameters('SqlServer9_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('SqlServer9_properties_typeProperties_userName')]",
 					"password": {
@@ -3442,7 +3840,6 @@
 					"database": "[parameters('linkedService1_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('linkedService1_properties_typeProperties_userName')]",
 					"password": {
@@ -3471,7 +3868,6 @@
 					"database": "[parameters('linkedService2_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('linkedService2_properties_typeProperties_userName')]",
 					"password": {
@@ -3500,7 +3896,6 @@
 					"database": "[parameters('linkedService3_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "Windows",
 					"userName": "[parameters('linkedService3_properties_typeProperties_userName')]",
 					"password": {
@@ -3806,6 +4201,624 @@
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable5')]",
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable4')]",
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable6')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage15')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage15_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage16')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage16_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage17')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage17_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer14')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer14_connectionString')]",
+					"userName": "[parameters('SqlServer14_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer14_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/dataflow1')]",
+			"type": "Microsoft.DataFactory/factories/dataflows",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "MappingDataFlow",
+				"typeProperties": {
+					"sources": [
+						{
+							"dataset": {
+								"referenceName": "Json4",
+								"type": "DatasetReference"
+							},
+							"name": "source1"
+						}
+					],
+					"sinks": [
+						{
+							"dataset": {
+								"referenceName": "AzureSqlTable13",
+								"type": "DatasetReference"
+							},
+							"name": "sink1"
+						}
+					],
+					"transformations": [
+						{
+							"name": "flatten1"
+						}
+					],
+					"scriptLines": [
+						"source(output(",
+						"          address as (city as string, state as string, street as string, zip as integer)[],",
+						"          age as short,",
+						"          course as string,",
+						"          name as string",
+						"     ),",
+						"     allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     limit: 100,",
+						"     ignoreNoFilesFound: false,",
+						"     documentForm: 'arrayOfDocuments') ~> source1",
+						"source1 foldDown(unroll(address),",
+						"     mapColumn(",
+						"          city = address.city,",
+						"          state = address.state,",
+						"          street = address.street,",
+						"          zip = address.zip",
+						"     ),",
+						"     skipDuplicateMapInputs: false,",
+						"     skipDuplicateMapOutputs: false) ~> flatten1",
+						"flatten1 sink(allowSchemaDrift: true,",
+						"     validateSchema: false,",
+						"     deletable:false,",
+						"     insertable:true,",
+						"     updateable:false,",
+						"     upsertable:false,",
+						"     format: 'table',",
+						"     skipDuplicateMapInputs: true,",
+						"     skipDuplicateMapOutputs: true,",
+						"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+					]
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/datasets/Json4')]",
+				"[concat(variables('factoryId'), '/datasets/AzureSqlTable13')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage18')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage18_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage18",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "sample4.json",
+						"container": "jsonfile"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"people": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"firstName": {
+										"type": "string"
+									},
+									"lastName": {
+										"type": "string"
+									},
+									"gender": {
+										"type": "string"
+									},
+									"age": {
+										"type": "integer"
+									},
+									"number": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage18')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage19')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage19_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json2')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage19",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "sample4.json",
+						"container": "jsonfile"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"someone": {
+							"type": "integer"
+						},
+						"slide": {
+							"type": "number"
+						},
+						"dark": {
+							"type": "string"
+						},
+						"substance": {
+							"type": "object",
+							"properties": {
+								"wealth": {
+									"type": "integer"
+								},
+								"needs": {
+									"type": "integer"
+								},
+								"love": {
+									"type": "boolean"
+								},
+								"place": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								},
+								"paper": {
+									"type": "integer"
+								},
+								"from": {
+									"type": "boolean"
+								},
+								"labor": {
+									"type": "string"
+								},
+								"saved": {
+									"type": "boolean"
+								},
+								"electricity": {
+									"type": "boolean"
+								},
+								"mile": {
+									"type": "number"
+								},
+								"activity": {
+									"type": "string"
+								},
+								"threw": {
+									"type": "boolean"
+								},
+								"mathematics": {
+									"type": "string"
+								},
+								"stay": {
+									"type": "integer"
+								},
+								"concerned": {
+									"type": "boolean"
+								},
+								"log": {
+									"type": "string"
+								},
+								"offer": {
+									"type": "string"
+								},
+								"arrangement": {
+									"type": "number"
+								},
+								"larger": {
+									"type": "boolean"
+								},
+								"real": {
+									"type": "boolean"
+								},
+								"camera": {
+									"type": "string"
+								},
+								"laid": {
+									"type": "integer"
+								},
+								"dot": {
+									"type": "boolean"
+								},
+								"quite": {
+									"type": "string"
+								},
+								"perfect": {
+									"type": "string"
+								},
+								"mark": {
+									"type": "integer"
+								},
+								"topic": {
+									"type": "number"
+								},
+								"instead": {
+									"type": "string"
+								},
+								"hall": {
+									"type": "string"
+								},
+								"steam": {
+									"type": "boolean"
+								},
+								"sat": {
+									"type": "string"
+								},
+								"meat": {
+									"type": "number"
+								},
+								"snake": {
+									"type": "boolean"
+								},
+								"judge": {
+									"type": "integer"
+								},
+								"vegetable": {
+									"type": "string"
+								}
+							}
+						},
+						"bank": {
+							"type": "boolean"
+						},
+						"pressure": {
+							"type": "boolean"
+						},
+						"music": {
+							"type": "number"
+						},
+						"ball": {
+							"type": "string"
+						},
+						"region": {
+							"type": "boolean"
+						},
+						"appropriate": {
+							"type": "string"
+						},
+						"post": {
+							"type": "number"
+						},
+						"pour": {
+							"type": "integer"
+						},
+						"bare": {
+							"type": "string"
+						},
+						"classroom": {
+							"type": "string"
+						},
+						"inside": {
+							"type": "boolean"
+						},
+						"seed": {
+							"type": "boolean"
+						},
+						"hardly": {
+							"type": "string"
+						},
+						"married": {
+							"type": "boolean"
+						},
+						"sport": {
+							"type": "integer"
+						},
+						"replace": {
+							"type": "string"
+						},
+						"height": {
+							"type": "number"
+						},
+						"hour": {
+							"type": "integer"
+						},
+						"same": {
+							"type": "string"
+						},
+						"potatoes": {
+							"type": "string"
+						},
+						"happily": {
+							"type": "string"
+						},
+						"notice": {
+							"type": "string"
+						},
+						"husband": {
+							"type": "boolean"
+						},
+						"anywhere": {
+							"type": "string"
+						},
+						"earn": {
+							"type": "string"
+						},
+						"directly": {
+							"type": "number"
+						},
+						"friendly": {
+							"type": "number"
+						},
+						"month": {
+							"type": "boolean"
+						},
+						"lot": {
+							"type": "boolean"
+						},
+						"end": {
+							"type": "string"
+						},
+						"consonant": {
+							"type": "string"
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage19')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json3')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage19",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "sample4.json",
+						"container": "jsonfile"
+					}
+				},
+				"schema": {
+					"type": "object",
+					"properties": {
+						"people": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"firstName": {
+										"type": "string"
+									},
+									"lastName": {
+										"type": "string"
+									},
+									"gender": {
+										"type": "string"
+									},
+									"age": {
+										"type": "integer"
+									},
+									"number": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage19')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/Json4')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureBlobStorage19",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "sample.json",
+						"container": "jsonfile"
+					}
+				},
+				"schema": {}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage19')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServer15')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SqlServer15_connectionString')]",
+					"userName": "[parameters('SqlServer15_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SqlServer15_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "integrationRuntime1",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlTable13')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "AzureSqlTable",
+				"schema": [],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "address"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase1')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline3')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "dataflow1",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"sink1": {}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/dataflow1')]"
 			]
 		}
 	]

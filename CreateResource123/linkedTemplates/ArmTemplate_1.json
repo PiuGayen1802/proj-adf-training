@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "CreateResource123"
 		},
+		"AzureSqlDatabase3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase3'"
+		},
 		"AzureSqlDatabase4_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase4'"
@@ -31,6 +35,26 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'SqlServer6'"
 		},
+		"AzureBlobStorage15_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage15'"
+		},
+		"AzureBlobStorage16_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage16'"
+		},
+		"AzureBlobStorage17_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage17'"
+		},
+		"AzureBlobStorage18_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage18'"
+		},
+		"AzureBlobStorage19_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage19'"
+		},
 		"RestService1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://freetestapi.com/api/v1/students"
@@ -38,6 +62,14 @@
 		"RestService2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://reqres.in/api/users"
+		},
+		"RestService3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.restful-api.dev/objects"
+		},
+		"RestService4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/comments?postId=1"
 		},
 		"SqlServer6_properties_typeProperties_server": {
 			"type": "string",
@@ -56,6 +88,19 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase3')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureSqlDatabase",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureSqlDatabase3_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureSqlDatabase4')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -152,6 +197,36 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/RestService3')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('RestService3_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/RestService4')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "RestService",
+				"typeProperties": {
+					"url": "[parameters('RestService4_properties_typeProperties_url')]",
+					"enableServerCertificateValidation": true,
+					"authenticationType": "Anonymous"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/SqlServer6')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -163,7 +238,6 @@
 					"database": "[parameters('SqlServer6_properties_typeProperties_database')]",
 					"encrypt": "optional",
 					"trustServerCertificate": false,
-					"hostNameInCertificate": "",
 					"authenticationType": "SQL",
 					"userName": "[parameters('SqlServer6_properties_typeProperties_userName')]",
 					"password": {
@@ -191,6 +265,71 @@
 			"properties": {
 				"type": "SelfHosted",
 				"typeProperties": {}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage15')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage15_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage16')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage16_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage17')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage17_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage18')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage18_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage19')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage19_connectionString')]"
+				}
 			},
 			"dependsOn": []
 		},
@@ -273,319 +412,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase8')]"
 			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable11')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase8",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "ProductSubcategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "ProductCategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "nvarchar"
-					},
-					{
-						"name": "rowguid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "ProductSubcategory"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase8')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable12')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase7",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "dbo",
-					"table": "ProductDetails"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase7')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable2')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase2",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "production",
-					"table": "details"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable3')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "ProductCategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "nvarchar"
-					},
-					{
-						"name": "rowguid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "ProductCategory"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable4')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase3",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "ProductSubcategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "ProductCategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "nvarchar"
-					},
-					{
-						"name": "rowguid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "ProductSubcategory"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable5')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase4",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "ProductCategoryID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "Name",
-						"type": "nvarchar"
-					},
-					{
-						"name": "rowguid",
-						"type": "uniqueidentifier"
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "ProductCategory"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase4')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable6')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase5",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [],
-				"typeProperties": {
-					"schema": "Production",
-					"table": "details"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureSqlDatabase5')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureSqlTable7')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AzureSqlDatabase1",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "AzureSqlTable",
-				"schema": [
-					{
-						"name": "PurchaseOrderID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "PurchaseOrderDetailID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "DueDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					},
-					{
-						"name": "OrderQty",
-						"type": "smallint",
-						"precision": 5
-					},
-					{
-						"name": "ProductID",
-						"type": "int",
-						"precision": 10
-					},
-					{
-						"name": "UnitPrice",
-						"type": "money",
-						"precision": 19,
-						"scale": 4
-					},
-					{
-						"name": "LineTotal",
-						"type": "money",
-						"precision": 19,
-						"scale": 4
-					},
-					{
-						"name": "ReceivedQty",
-						"type": "decimal",
-						"precision": 8,
-						"scale": 2
-					},
-					{
-						"name": "RejectedQty",
-						"type": "decimal",
-						"precision": 8,
-						"scale": 2
-					},
-					{
-						"name": "StockedQty",
-						"type": "decimal",
-						"precision": 9,
-						"scale": 2
-					},
-					{
-						"name": "ModifiedDate",
-						"type": "datetime",
-						"precision": 23,
-						"scale": 3
-					}
-				],
-				"typeProperties": {
-					"schema": "Purchasing",
-					"table": "PurchaseOrderDetail"
-				}
-			},
-			"dependsOn": []
 		}
 	]
 }
