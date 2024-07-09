@@ -1,0 +1,238 @@
+{
+	"name": "Json2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sample4.json",
+				"container": "jsonfile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"someone": {
+					"type": "integer"
+				},
+				"slide": {
+					"type": "number"
+				},
+				"dark": {
+					"type": "string"
+				},
+				"substance": {
+					"type": "object",
+					"properties": {
+						"wealth": {
+							"type": "integer"
+						},
+						"needs": {
+							"type": "integer"
+						},
+						"love": {
+							"type": "boolean"
+						},
+						"place": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"paper": {
+							"type": "integer"
+						},
+						"from": {
+							"type": "boolean"
+						},
+						"labor": {
+							"type": "string"
+						},
+						"saved": {
+							"type": "boolean"
+						},
+						"electricity": {
+							"type": "boolean"
+						},
+						"mile": {
+							"type": "number"
+						},
+						"activity": {
+							"type": "string"
+						},
+						"threw": {
+							"type": "boolean"
+						},
+						"mathematics": {
+							"type": "string"
+						},
+						"stay": {
+							"type": "integer"
+						},
+						"concerned": {
+							"type": "boolean"
+						},
+						"log": {
+							"type": "string"
+						},
+						"offer": {
+							"type": "string"
+						},
+						"arrangement": {
+							"type": "number"
+						},
+						"larger": {
+							"type": "boolean"
+						},
+						"real": {
+							"type": "boolean"
+						},
+						"camera": {
+							"type": "string"
+						},
+						"laid": {
+							"type": "integer"
+						},
+						"dot": {
+							"type": "boolean"
+						},
+						"quite": {
+							"type": "string"
+						},
+						"perfect": {
+							"type": "string"
+						},
+						"mark": {
+							"type": "integer"
+						},
+						"topic": {
+							"type": "number"
+						},
+						"instead": {
+							"type": "string"
+						},
+						"hall": {
+							"type": "string"
+						},
+						"steam": {
+							"type": "boolean"
+						},
+						"sat": {
+							"type": "string"
+						},
+						"meat": {
+							"type": "number"
+						},
+						"snake": {
+							"type": "boolean"
+						},
+						"judge": {
+							"type": "integer"
+						},
+						"vegetable": {
+							"type": "string"
+						}
+					}
+				},
+				"bank": {
+					"type": "boolean"
+				},
+				"pressure": {
+					"type": "boolean"
+				},
+				"music": {
+					"type": "number"
+				},
+				"ball": {
+					"type": "string"
+				},
+				"region": {
+					"type": "boolean"
+				},
+				"appropriate": {
+					"type": "string"
+				},
+				"post": {
+					"type": "number"
+				},
+				"pour": {
+					"type": "integer"
+				},
+				"bare": {
+					"type": "string"
+				},
+				"classroom": {
+					"type": "string"
+				},
+				"inside": {
+					"type": "boolean"
+				},
+				"seed": {
+					"type": "boolean"
+				},
+				"hardly": {
+					"type": "string"
+				},
+				"married": {
+					"type": "boolean"
+				},
+				"sport": {
+					"type": "integer"
+				},
+				"replace": {
+					"type": "string"
+				},
+				"height": {
+					"type": "number"
+				},
+				"hour": {
+					"type": "integer"
+				},
+				"same": {
+					"type": "string"
+				},
+				"potatoes": {
+					"type": "string"
+				},
+				"happily": {
+					"type": "string"
+				},
+				"notice": {
+					"type": "string"
+				},
+				"husband": {
+					"type": "boolean"
+				},
+				"anywhere": {
+					"type": "string"
+				},
+				"earn": {
+					"type": "string"
+				},
+				"directly": {
+					"type": "number"
+				},
+				"friendly": {
+					"type": "number"
+				},
+				"month": {
+					"type": "boolean"
+				},
+				"lot": {
+					"type": "boolean"
+				},
+				"end": {
+					"type": "string"
+				},
+				"consonant": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
