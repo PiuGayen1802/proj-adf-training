@@ -1,0 +1,36 @@
+{
+	"name": "pipeline4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set value for fileType",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "FileType",
+					"value": {
+						"value": "@replace(pipeline().parameters.FileName,'Sales','')",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"FileName": {
+				"type": "string",
+				"defaultValue": "DailySales"
+			}
+		},
+		"variables": {
+			"FileType": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}

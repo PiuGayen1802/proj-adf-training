@@ -30,7 +30,7 @@
 		],
 		"typeProperties": {
 			"schema": "Production",
-			"table": "ProductCategory"
+			"table": "testdata"
 		}
 	}
 }

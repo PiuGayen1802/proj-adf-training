@@ -1,0 +1,32 @@
+{
+	"name": "PL_Email",
+	"properties": {
+		"activities": [
+			{
+				"name": "Send Email",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"ContentType": "application/json"
+					},
+					"url": "https://prod-04.eastus.logic.azure.com:443/workflows/f328eec8edf04e4fa85a340fb526012a/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=fS1r5Q-vqT0yhFoSYW4A9vfMMiDdAjkndU-GXXnoLgM",
+					"body": {
+						"value": "{\n    \"DataFactoryName\" : \"@{pipeline().DataFactory}\",\n    \"Pipeline\" : \"@{pipeline().Pipeline}\",\n    \"Subject\" : \"Task is completed\",\n    \"Color\" : \"Blue\"\n}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
