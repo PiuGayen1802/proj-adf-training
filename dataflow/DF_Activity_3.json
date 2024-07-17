@@ -1,0 +1,74 @@
+{
+	"name": "DF_Activity_3",
+	"properties": {
+		"folder": {
+			"name": "Assessment"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Excel4",
+						"type": "DatasetReference"
+					},
+					"name": "studentdetails"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlTable16",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "alterRow1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          StudentId as string,",
+				"          {Student code} as string,",
+				"          {Student name} as string,",
+				"          date as string,",
+				"          Language as string,",
+				"          Maths as string,",
+				"          Phiysics as string,",
+				"          Chemistry as string,",
+				"          Computersicence as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> studentdetails",
+				"studentdetails alterRow(deleteIf({Student code}=='SC0A4'),",
+				"     updateIf(date=='2024-07-17')) ~> alterRow1",
+				"alterRow1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:true,",
+				"     upsertable:false,",
+				"     keys:['date'],",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          StudentId,",
+				"          {Student code},",
+				"          {Student name},",
+				"          date,",
+				"          Language,",
+				"          Maths,",
+				"          Phiysics,",
+				"          Chemistry,",
+				"          Computersicence",
+				"     )) ~> sink1"
+			]
+		}
+	}
+}
