@@ -1,0 +1,44 @@
+{
+	"name": "DF_Activity_4",
+	"properties": {
+		"folder": {
+			"name": "Assessment"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Excel5",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "aggregate1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          StudentId as string,",
+				"          {Student code} as string,",
+				"          {Student name} as string,",
+				"          date as string,",
+				"          Language as float,",
+				"          Maths as float,",
+				"          Phiysics as float,",
+				"          Chemistry as float,",
+				"          Computersicence as float",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 aggregate(groupBy({Student name}),",
+				"     {Total marks} = ERROR_FUNCTION('')) ~> aggregate1"
+			]
+		}
+	}
+}
