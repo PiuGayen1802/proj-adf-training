@@ -1,0 +1,56 @@
+{
+	"name": "AzureSqlTable20",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "fullName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "phone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "accountCreated",
+				"type": "nvarchar"
+			},
+			{
+				"name": "account_id",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "accountBalance",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "Accounts"
+		}
+	}
+}

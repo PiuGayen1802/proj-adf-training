@@ -1,5 +1,5 @@
 {
-	"name": "dataflow1",
+	"name": "DF_JSON",
 	"properties": {
 		"folder": {
 			"name": "Assessment"
@@ -9,7 +9,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "Json5",
+						"referenceName": "Json6",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -18,7 +18,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable18",
+						"referenceName": "AzureSqlTable20",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -27,6 +27,9 @@
 			"transformations": [
 				{
 					"name": "flatten1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -51,14 +54,26 @@
 				"          email,",
 				"          phone,",
 				"          accountCreated,",
-				"          account_id = accounts.accountId,",
+				"          accountId = accounts.accountId,",
 				"          accountBalance = accounts.accountBalance,",
 				"          created = accounts.created",
 				"     ),",
 				"     skipDuplicateMapInputs: false,",
 				"     skipDuplicateMapOutputs: false) ~> flatten1",
-				"flatten1 sink(allowSchemaDrift: true,",
+				"flatten1 derive(accountId = toLong(accountId)) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          id as integer,",
+				"          fullName as string,",
+				"          country as string,",
+				"          email as string,",
+				"          phone as string,",
+				"          accountCreated as string,",
+				"          account_id as long,",
+				"          accountBalance as integer,",
+				"          created as string",
+				"     ),",
 				"     deletable:false,",
 				"     insertable:true,",
 				"     updateable:false,",
