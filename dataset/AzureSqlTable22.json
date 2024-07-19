@@ -1,0 +1,82 @@
+{
+	"name": "AzureSqlTable22",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StudentId",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Student code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Student Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "date",
+				"type": "date"
+			},
+			{
+				"name": "Language",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Maths",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Phiysics",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Chemistry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Computersicence",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Percentage",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Grade",
+				"type": "char"
+			},
+			{
+				"name": "IsDeleted",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "UpdatedDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UpdatedBy",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Stage ",
+			"table": "Users"
+		}
+	}
+}
