@@ -1,0 +1,12 @@
+{
+	"name": "RestService5",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://covid-19-tracking.p.rapidapi.com/v1/usa",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
