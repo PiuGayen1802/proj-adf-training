@@ -19,7 +19,7 @@
 					"headers": {
 						"ContentType": "application/json"
 					},
-					"url": "https://prod-04.eastus.logic.azure.com:443/workflows/f328eec8edf04e4fa85a340fb526012a/triggers/request/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Frequest%2Frun&sv=1.0&sig=fS1r5Q-vqT0yhFoSYW4A9vfMMiDdAjkndU-GXXnoLgM",
+					"url": "https://prod-84.eastus.logic.azure.com:443/workflows/00ac3c0c78c64e5ca9fc2d5025285dd6/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=_yq2I3AdirnGLBNA4d_G9JvEVNwuRzLLH_xc7s2Ni-w",
 					"body": {
 						"value": "{\n    \"DataFactoryName\" : \"@{pipeline().DataFactory}\",\n    \"Pipeline\" : \"@{pipeline().Pipeline}\",\n    \"Subject\" : \"Task is completed\",\n    \"Color\" : \"Blue\"\n}",
 						"type": "Expression"
