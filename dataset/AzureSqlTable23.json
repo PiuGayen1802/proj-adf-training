@@ -1,0 +1,57 @@
+{
+	"name": "AzureSqlTable23",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "StudentId",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Student code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Student name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Language",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Maths",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phiysics",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Chemistry",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Computersicence",
+				"type": "nvarchar"
+			},
+			{
+				"name": "stagecreatedDate",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "stage",
+			"table": "SampleData_Type"
+		}
+	}
+}
